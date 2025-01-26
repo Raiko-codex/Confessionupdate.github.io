@@ -1,6 +1,6 @@
-// Song links with YouTube universal links
+// Song links
 const songs = {
-  "Blue": "https://www.youtube.com/watch?v=4adZ7AguVcw",
+  "Blue": "https://youtu.be/4adZ7AguVcw?si=LmZKKl47iZGk_B8t",
   "A Thousand Years": "https://www.youtube.com/watch?v=rtOvBOTyX00"
 };
 
@@ -20,6 +20,6 @@ document.getElementById("confess-btn").addEventListener("click", () => {
   // Display the confession message
   document.getElementById("output").textContent = message;
 
-  // Redirect to the song's YouTube link
-  window.location.href = songs[songName];
+  // Open the song in a new tab
+  window.open(songs[songName], "_blank");
 });
