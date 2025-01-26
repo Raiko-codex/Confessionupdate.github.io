@@ -1,7 +1,7 @@
-// Song links with `intent://` for Android devices
+// Song links with YouTube universal links
 const songs = {
-  "Blue": "intent://www.youtube.com/watch?v=4adZ7AguVcw#Intent;package=com.google.android.youtube;scheme=https;end",
-  "A Thousand Years": "intent://www.youtube.com/watch?v=rtOvBOTyX00#Intent;package=com.google.android.youtube;scheme=https;end"
+  "Blue": "https://www.youtube.com/watch?v=4adZ7AguVcw",
+  "A Thousand Years": "https://www.youtube.com/watch?v=rtOvBOTyX00"
 };
 
 // Event listener for the button
@@ -20,6 +20,6 @@ document.getElementById("confess-btn").addEventListener("click", () => {
   // Display the confession message
   document.getElementById("output").textContent = message;
 
-  // Open the song in the YouTube app using intent
+  // Redirect to the song's YouTube link
   window.location.href = songs[songName];
 });
